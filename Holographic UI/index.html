@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>hello</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Futuristic Processor</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+    
+
+<main>
+  <section>
+    <h2>Powerful Processor</h2>
+    <p>Our processor technology is the most advanced in the world, delivering lightning-fast performance and unparalleled reliability.</p>
+  </section>
+  
+  <section>
+    <h2>Holographic Interface</h2>
+    <p>Our holographic interface provides a revolutionary new way to interact with your device, giving you greater control and flexibility than ever before.</p>
+  </section>
+  
+  <section>
+    <h2>Advanced Technology</h2>
+    <p>Our cutting-edge technology is designed to meet the needs of the most demanding users, providing unparalleled performance and reliability in even the most challenging environments.</p>
+  </section>
+</main>
+</body>
+</html>
+
+
+
+<script>
+    const processor = document.getElementById('processor');
+const speed = document.getElementById('speed');
+const temperature = document.getElementById('temperature');
+
+setInterval(() => {
+  // Get processor activity and speed metrics
+  const activity = getProcessorActivity();
+  const currentSpeed = getCurrentSpeed();
+  
+  // Update display with new metrics
+  processor.innerText = activity;
+  speed.innerText = currentSpeed;
+  
+  // Check temperature and alert user if it's too high
+  const currentTemperature = getCurrentTemperature();
+  if (currentTemperature > 80) {
+    temperature.classList.add('warning');
+  } else {
+    temperature.classList.remove('warning');
+  }
+}, 1000);
+
+</script>
